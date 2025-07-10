@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 
+// This is the main page of the weather app
 export default function Home() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState('');
-
+  
+  // Function to fetch weather data from the backend API
   const getWeather = async () => {
     try {
       const res = await fetch(`http://localhost:5000/api/weather?city=${city}`);
@@ -20,6 +22,9 @@ export default function Home() {
     }
   };
 
+  // Render the weather app UI
+  // It includes an input field for the city name, a search button, and displays the
+  // current weather, UV index, humidity, and a 5-period forecast.
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-300 to-indigo-500 flex items-center justify-center p-4">
       <div className="bg-gray-100 rounded-2xl shadow-xl p-8 w-full max-w-2xl text-center text-black">
