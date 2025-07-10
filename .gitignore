@@ -1,0 +1,15 @@
+# Node.js / Next.js
+node_modules/
+.next/
+dist/
+
+# Python
+venv/
+__pycache__/
+
+# Others
+.DS_Store
+.env
+.vscode/
+/venv/Lib
+/weather
